@@ -1,3 +1,20 @@
 			</div>
+			<!-- Attendance Limit -->
+			<script>
+				var interval = window.setInterval(function() {
+					var attendanceLimit = document.querySelector('#can_embed_form .clearfix');
+					var defaultText = 'This event reached its attendance limit.';
+					if (attendanceLimit) {
+						if (attendanceLimit.innerText.trim() == defaultText) {
+							var message = '<div><h2>Sorry, this event has reached its attendance limit.</h2><ul><li><a href="http://watchparty.pawar2018.com/">Go back to the Virtual Town Hall</a></li><li><a href="https://www.pawar2018.com/events/">Check out all of our upcoming events</a></li><li><a href="https://actionnetwork.org/events/c114d2d88009cc1007ffd17716be5f3e657a77c5/edit">Host your own event</a></li></ul></div>';
+							attendanceLimit.innerHTML = message;
+							window.clearInterval(interval);
+						}
+						
+						attendanceLimit.style.display = 'block';
+					}
+				}, 100);
+			</script>
+			<!-- Attenandce Limit -->
 	</body>
 </html>
